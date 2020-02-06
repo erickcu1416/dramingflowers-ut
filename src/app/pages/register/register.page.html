@@ -1,9 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+
+<ion-content color="warning">
+  <!-- Input with placeholder -->
+<ion-grid class="mt-home" fixed>
+  <ion-row>
+    <ion-col offset="1" size="10">
+      <ion-item color="warning">
+        <ion-input [(ngModel)]="nombreUsuario" class="txt-input" placeholder="Nombre de usuario"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col offset="1" size="10">
+      <ion-item color="warning">
+        <ion-input [(ngModel)]="usuario" class="txt-input" placeholder="Correo"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col offset="1" size="10">
+      <ion-item color="warning">
+        <ion-input [(ngModel)]="paswword" class="txt-input" placeholder="Password" type="password"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col offset="1" size="10">
+      <ion-button (click)="login()" expand="full">LOGIN</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<!-- Input with placeholder -->
 
 </ion-content>

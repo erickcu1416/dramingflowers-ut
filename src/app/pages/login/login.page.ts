@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  usuario = '';
+  paswword = '';
 
   constructor() { }
 
@@ -14,6 +16,7 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    console.log('LOGIN ACTIVO');
+    console.log('el usario es', this.usuario);
+    console.log('el password es', this.paswword);
   }
 }
