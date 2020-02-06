@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseKey: {
+    apiKey: 'AIzaSyAeg-TvHaKljALiEeEIgSE5O19WJZ5hJfc',
+    authDomain: 'dreaming-flowers-ut-98c52.firebaseapp.com',
+    databaseURL: 'https://dreaming-flowers-ut-98c52.firebaseio.com',
+    projectId: 'dreaming-flowers-ut-98c52',
+    storageBucket: 'dreaming-flowers-ut-98c52.appspot.com',
+    messagingSenderId: '163136140620',
+    appId: '1:163136140620:web:3dd85c316963727a9acbe9',
+    measurementId: 'G-HRFLHJTKRK'
+  }
 };
 
 /*

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -11,15 +12,16 @@ export class RegisterPage implements OnInit {
   usuario = '';
   paswword = '';
 
-  constructor() { }
+  constructor(private _authSerivice: AuthService) { }
 
   ngOnInit() {
     console.log('HOLA UT');
   }
 
-  login() {
+  register() {
     console.log('el usario es', this.usuario);
     console.log('el password es', this.paswword);
+    this._authSerivice.registerFirebase(this.usuario, this.paswword);
   }
 
 }
