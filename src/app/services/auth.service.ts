@@ -23,4 +23,16 @@ export class AuthService {
     });
   }
 
+
+  getUser() {
+    return new Promise((resolve, reject) => {
+      this.auth.user.subscribe(
+        (user) => {
+          console.log('Usuario en home', user);
+          return resolve(user);
+        }
+      );
+    });
+  }
+
 }
