@@ -9,11 +9,18 @@ export class AuthService {
   constructor(private auth: AngularFireAuth) { }
 
   registerFirebase(email, password) {
-    this.auth.auth.createUserWithEmailAndPassword(email, password).then(
-      () => {
-        console.log('Usuario registrado');
-      }
-    );
+    return new Promise((resolve, reject) => {
+      this.auth.auth.createUserWithEmailAndPassword(email, password).then(
+        () => {
+          console.log('Usuario registrado');
+          return resolve(true);
+        }
+      ).catch(
+        () => {
+          return reject(false);
+        }
+      );
+    });
   }
 
 }

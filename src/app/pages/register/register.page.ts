@@ -24,6 +24,7 @@ export class RegisterPage implements OnInit {
     console.log('el password es', this.paswword);
     this.messagesCtrl.presentLoading('Registrando usuario...');
     this._authSerivice.registerFirebase(this.usuario, this.paswword);
+    this.messagesCtrl.hideLoading();
   }
 
 }

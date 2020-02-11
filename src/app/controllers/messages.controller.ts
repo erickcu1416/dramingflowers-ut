@@ -18,4 +18,13 @@ export class MessagesController {
     });
   }
 
+  hideLoading() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        this.loading.dismiss();
+        resolve(true);
+      }, 500);
+    });
+  }
+
 }
